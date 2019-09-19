@@ -1,18 +1,21 @@
-import * as types from '../constants/ActionTypes';
+import * as types from "../constants/ActionTypes";
 
 const initialState = {
   friendsById: [
     {
-      name: 'Theodore Roosevelt',
-      starred: true
+      name: "Theodore Roosevelt",
+      starred: true,
+      gender: "male"
     },
     {
-      name: 'Abraham Lincoln',
-      starred: false
+      name: "Abraham Lincoln",
+      starred: false,
+      gender: "male"
     },
     {
-      name: 'George Washington',
-      starred: false
+      name: "George Washington",
+      starred: false,
+      gender: "male"
     }
   ]
 };
@@ -25,14 +28,17 @@ export default function friends(state = initialState, action) {
         friendsById: [
           ...state.friendsById,
           {
-            name: action.name
+            name: action.personDetails.name,
+            gender: action.personDetails.gender
           }
-        ],
+        ]
       };
     case types.DELETE_FRIEND:
       return {
         ...state,
-        friendsById: state.friendsById.filter((item, index) => index !== action.id)
+        friendsById: state.friendsById.filter(
+          (item, index) => index !== action.id
+        )
       };
     case types.STAR_FRIEND:
       let friends = [...state.friendsById];
@@ -42,7 +48,7 @@ export default function friends(state = initialState, action) {
         ...state,
         friendsById: friends
       };
-
+  
     default:
       return state;
   }

@@ -1,5 +1,5 @@
 body {
-  background-color: #F4F3F0;
+  background-color: #f4f3f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,8 +8,8 @@ body {
 :local(.friendListApp) {
   width: 300px;
   padding-top: 18px;
-  background-color: #5C75B0;
-  border: 1px solid #E3E3E3;
+  background-color: #5c75b0;
+  border: 1px solid #e3e3e3;
 }
 
 :local(.friendListApp h1) {
@@ -20,4 +20,28 @@ body {
   margin-top: 0;
   padding-left: 10px;
   font-family: Helvetica;
+}
+.pgIcons {
+  font-size: 30px;
+}
+.div-page-main {
+  float: right;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+:local(.pages) {
+  padding: 6px 5px;
+  margin-top: 5px;
+  border-color: #ccc;
+}
+
+:local(.prevBtn),
+:local(.nextBtn) {
+  padding: 0px 10px;
+  margin: 5px 5px 0;
+  color: #5c75b0;
+  line-height: 1;
+  border-radius: 0;
 }

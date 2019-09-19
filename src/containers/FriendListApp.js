@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import styles from './FriendListApp.css';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import styles from "./FriendListApp.css";
+import { connect } from "react-redux";
 
-import {addFriend, deleteFriend, starFriend} from '../actions/FriendsActions';
-import { FriendList, AddFriendInput } from '../components';
+import { addFriend, deleteFriend, starFriend } from "../actions/FriendsActions";
+import { FriendList, AddFriendInput } from "../components";
 
 class FriendListApp extends Component {
-
-  render () {
-    const { friendlist: { friendsById }} = this.props;
+  render() {
+    const {
+      friendlist: { friendsById }
+    } = this.props;
 
     const actions = {
       addFriend: this.props.addFriend,
@@ -27,11 +28,14 @@ class FriendListApp extends Component {
 }
 
 function mapStateToProps(state) {
-  return state
+  return state;
 }
 
-export default connect(mapStateToProps, {
-  addFriend,
-  deleteFriend,
-  starFriend
-})(FriendListApp)
+export default connect(
+  mapStateToProps,
+  {
+    addFriend,
+    deleteFriend,
+    starFriend
+  }
+)(FriendListApp);

@@ -1,0 +1,25 @@
+  .pgIcons {
+    font-size: 30px;
+  }
+  .div-page-main {
+    float: right;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  :local(.pages) {
+    padding: 6px 5px;
+    margin-top: 5px;
+    border-color: #ccc;
+  }
+  
+  :local(.prevBtn),
+  :local(.nextBtn) {
+    padding: 0px 10px;
+    margin: 5px 5px 0;
+    color: #5c75b0;
+    line-height: 1;
+    border-radius: 0;
+  }
+  
